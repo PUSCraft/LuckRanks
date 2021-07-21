@@ -18,7 +18,6 @@ public class LuckRanks extends JavaPlugin {
     
     @Override
     public void onEnable() {
-        //Test Comment
         //Load Plugin
         plugin = this;
 
