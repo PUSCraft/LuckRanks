@@ -1,0 +1,52 @@
+gui_title: "&6&lPUSCraft &2&lRanks"
+gui_rows: 2
+# The first rank should have a "base rank" setup in LuckPerms.
+# Use /lp editor and add "meta.(your starting rank).true" to
+# add a base rank to allow rank progression.
+# command placeholders = %player% , %playeruuid%
+ranks:
+  rank1:
+    name: "Rank 1"
+    material: "RED_GLAZED_TERRACOTTA"
+    lore:
+      - "&9&lRank 1 Perks"
+      - "&e- &aXP: 85"
+      - "&e- &aMoney: $50"
+      - "&e- &aItems: Diamond x1"
+    rewards:
+      xp: 85
+      money: 50.0
+      commands:
+        - "give %player% diamond 1"
+      permissions:
+        - "essentials.fly"
+    requirements:
+      required_rank: "starter_rank"
+      required_money: 0.0
+      required_xp: 0
+  rank2:
+    name: "Rank 2"
+    material: "BLACK_GLAZED_TERRACOTTA"
+    lore:
+      - "&9&lRank 2 Perks"
+      - "&e- &aXP: 170"
+      - "&e- &aMoney: $100"
+      - "&e- &aItems: Diamond x2"
+    rewards:
+      xp: 170
+      money: 100.0
+      commands:
+        - "give %player% diamond 2"
+      permissions:
+        - "essentials.gamemode"
+        - "essentials.gamemode.*"
+    requirements:
+      required_rank: ""
+      required_money: 0.0
+      required_xp: 0
+    required_rank: "rank1"
+# These ranks are ranks that cannot be overriden, typically donor ranks
+# Ex: If a player buys a rank from your shop called "Legend" and they have not unlocked ranks
+# below the "Legend" donor rank. The player will only receive the perks and not change parent ranks
+premium:
+  - "rank1"

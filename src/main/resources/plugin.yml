@@ -1,0 +1,19 @@
+name: LuckRanks
+main: co.linuxman.luckranks.LuckRanks
+version: 1.0
+api-version: 1.16
+author: linuxman
+description: Luck Perms Rank management GUI
+depend:
+  - LuckPerms
+  - Vault
+commands:
+  ranks:
+    description: Opens LuckRanks GUI
+    permission: luckranks.use
+    default: true
+permissions:
+  luckranks.use:
+    description: Permission to open LuckRanks GUI
+  luckranks.reload:
+    description: Permission to reload the plugin
