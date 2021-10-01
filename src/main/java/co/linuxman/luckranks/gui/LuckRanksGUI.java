@@ -2,8 +2,8 @@ package co.linuxman.luckranks.gui;
 
 import co.linuxman.luckranks.LuckRanks;
 import co.linuxman.luckranks.managers.ConfigManager;
-import me.mattstudios.mfgui.gui.guis.Gui;
-import me.mattstudios.mfgui.gui.guis.GuiItem;
+import dev.triumphteam.gui.guis.Gui;
+import dev.triumphteam.gui.guis.GuiItem;
 import net.luckperms.api.LuckPerms;
 import net.luckperms.api.cacheddata.CachedMetaData;
 import net.luckperms.api.model.user.User;
