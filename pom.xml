@@ -8,7 +8,7 @@
     </properties>
     <groupId>co.linuxman</groupId>
     <artifactId>LuckRanks</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <build>
         <plugins>
             <plugin>
@@ -52,6 +52,10 @@
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
+        <repository>
+            <id>repo</id>
+            <url>https://repo.mattstudios.me/artifactory/public/</url>
+        </repository>
     </repositories>
     <dependencies>
         <dependency>
@@ -69,13 +73,13 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.16.5-R0.1-SNAPSHOT</version>
+            <version>1.17-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>me.mattstudios.utils</groupId>
-            <artifactId>matt-framework-gui</artifactId>
-            <version>2.0.2</version>
+            <groupId>dev.triumphteam</groupId>
+            <artifactId>triumph-gui</artifactId>
+            <version>3.0.3</version> <!-- replace version here -->
         </dependency>
     </dependencies>
 </project>
