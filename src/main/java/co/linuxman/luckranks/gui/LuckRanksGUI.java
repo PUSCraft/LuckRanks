@@ -2,7 +2,6 @@ package co.linuxman.luckranks.gui;
 
 import co.linuxman.luckranks.LuckRanks;
 import co.linuxman.luckranks.managers.ConfigManager;
-import com.sun.xml.internal.ws.api.Component;
 import dev.triumphteam.gui.guis.Gui;
 import dev.triumphteam.gui.guis.GuiItem;
 import net.luckperms.api.LuckPerms;
@@ -21,8 +20,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
