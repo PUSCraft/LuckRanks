@@ -2,6 +2,7 @@ package co.linuxman.luckranks.gui;
 
 import co.linuxman.luckranks.LuckRanks;
 import co.linuxman.luckranks.managers.ConfigManager;
+import com.sun.xml.internal.ws.api.Component;
 import dev.triumphteam.gui.guis.Gui;
 import dev.triumphteam.gui.guis.GuiItem;
 import net.luckperms.api.LuckPerms;
@@ -20,6 +21,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -31,6 +34,7 @@ public class LuckRanksGUI {
 
         ConfigManager cm = new ConfigManager();
         Gui gui = new Gui(cm.getGuiRows(),cm.getGuiTitle());
+        //Gui gui = Gui.gui().title().rows(cm.getGuiRows()).create();
         LuckPerms lp = LuckRanks.getLuckPerms();
         Economy eco = LuckRanks.getEconomy();
 
@@ -168,9 +172,9 @@ public class LuckRanksGUI {
                         //Add custom meta for rank
                         user.data().add(node);
                         lp.getUserManager().saveUser(user);
-                        //If player doesn't have a premium rank, set parent to new rank
+                        //If player doesn't have a premium rank, switch parent to new rank
                         if(!hasPremRank){
-                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), String.format("lp user %s parent set %s", player.getUniqueId().toString(), rank));
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), String.format("lp user %s parent switchprimarygroup %s", player.getUniqueId().toString(), rank));
                         }
                     }else{
                         player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cYou do not have the requirements for this rank!"));
